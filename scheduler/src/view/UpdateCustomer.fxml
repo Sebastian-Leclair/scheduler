@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="291.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateCustomer">
+   <children>
+      <Label layoutX="14.0" layoutY="23.0" text="Customer ID:" />
+      <TextField fx:id="customerIdTxt" editable="false" layoutX="92.0" layoutY="19.0" opacity="0.6" />
+      <Label layoutX="31.0" layoutY="59.0" text="Name:" />
+      <TextField fx:id="nameTxt" layoutX="92.0" layoutY="55.0" />
+      <TextField fx:id="addressTxt" layoutX="92.0" layoutY="90.0" />
+      <Label layoutX="26.0" layoutY="94.0" text="Address:" />
+      <TextField fx:id="postalCodeTxt" layoutX="92.0" layoutY="125.0" />
+      <Label layoutX="16.0" layoutY="129.0" text="Postal Code:" />
+      <Label layoutX="7.0" layoutY="164.0" text="Phone Number:" />
+      <TextField fx:id="phoneNumberTxt" layoutX="92.0" layoutY="160.0" />
+      <Label layoutX="26.0" layoutY="200.0" text="Country:" />
+      <ComboBox fx:id="countryCombo" layoutX="92.0" layoutY="196.0" prefWidth="150.0" />
+      <Label layoutX="272.0" layoutY="200.0" text="Division:" />
+      <ComboBox fx:id="divisionCombo" layoutX="328.0" layoutY="196.0" onMouseClicked="#onClickedDisplayDivisionCombo" prefWidth="150.0" />
+      <Button layoutX="147.0" layoutY="252.0" mnemonicParsing="false" onAction="#onActionUpdateCustomer" text="Save" />
+      <Button layoutX="377.0" layoutY="252.0" mnemonicParsing="false" onAction="#onActionDisplayMainMenu" text="Cancel" />
+   </children>
+</AnchorPane>

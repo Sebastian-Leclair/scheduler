@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="409.0" prefWidth="929.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Main">
+   <children>
+      <TableView fx:id="appointmentTableView" layoutX="10.0" layoutY="55.0" prefHeight="121.0" prefWidth="906.0">
+        <columns>
+          <TableColumn fx:id="appointmentIdCol" prefWidth="103.0" text="Appointment ID" />
+          <TableColumn fx:id="titleCol" prefWidth="74.0" text="Title" />
+            <TableColumn fx:id="descriptionCol" prefWidth="78.0" text="Description" />
+            <TableColumn fx:id="locationCol" prefWidth="73.0" text="Location" />
+            <TableColumn fx:id="contactCol" prefWidth="86.0" text="Contact" />
+            <TableColumn fx:id="typeCol" prefWidth="124.0" text="Type" />
+            <TableColumn fx:id="startCol" prefWidth="105.0" text="Start" />
+            <TableColumn fx:id="endCol" prefWidth="115.0" text="End" />
+            <TableColumn fx:id="customerIdCol" prefWidth="81.0" text="Customer ID" />
+            <TableColumn fx:id="userIdCol" prefWidth="66.0" text="User ID" />
+        </columns>
+      </TableView>
+      <TableView fx:id="customerTableView" layoutX="11.0" layoutY="229.0" prefHeight="121.0" prefWidth="906.0">
+         <columns>
+            <TableColumn fx:id="customerIdCol1" prefWidth="81.0" text="Customer ID" />
+            <TableColumn fx:id="customerNameCol" prefWidth="111.0" text="Name" />
+            <TableColumn fx:id="addressCol" prefWidth="166.0" text="Address" />
+            <TableColumn fx:id="postalCodeCol" prefWidth="152.0" text="Postal Code" />
+            <TableColumn fx:id="phoneNumberCol" prefWidth="181.0" text="Phone Number" />
+            <TableColumn fx:id="divisionCol" prefWidth="124.0" text="Division" />
+            <TableColumn fx:id="countryCol" prefWidth="90.0" text="Country" />
+         </columns>
+      </TableView>
+      <RadioButton fx:id="currentMonthRBtn" layoutX="10.0" layoutY="26.0" mnemonicParsing="false" onAction="#currentMonthSelected" text="Current Month">
+         <toggleGroup>
+            <ToggleGroup fx:id="appointmentView" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="currentWeekRBtn" layoutX="117.0" layoutY="26.0" mnemonicParsing="false" onAction="#currentWeekSelected" text="Current Week" toggleGroup="$appointmentView" />
+      <Button layoutX="442.0" layoutY="188.0" mnemonicParsing="false" onAction="#onActionDisplayUpdateAppointmentMenu" text="Update Appointment" />
+      <Button layoutX="275.0" layoutY="188.0" mnemonicParsing="false" onAction="#onActionDisplayAddAppointmentMenu" text="Add Appointment" />
+      <Button layoutX="621.0" layoutY="188.0" mnemonicParsing="false" onAction="#onActionDeleteAppointment" text="Delete Appointment" />
+      <Button layoutX="285.0" layoutY="361.0" mnemonicParsing="false" onAction="#onActionDisplayAddCustomerMenu" text="Add Customer" />
+      <Button layoutX="452.0" layoutY="361.0" mnemonicParsing="false" onAction="#onActionDisplayUpdateCustomerMenu" text="Update Customer" />
+      <Button layoutX="631.0" layoutY="361.0" mnemonicParsing="false" onAction="#onActionDeleteCustomer" text="Delete Customer" />
+      <Label fx:id="customMessageLbl" layoutX="348.0" layoutY="25.0" textFill="#eb1515">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button layoutX="858.0" layoutY="22.0" mnemonicParsing="false" onAction="#onActionDisplayReports" text="Reports" />
+      <RadioButton fx:id="allRBtn" layoutX="220.0" layoutY="27.0" mnemonicParsing="false" onAction="#allAppointmentsSelected" text="All" toggleGroup="$appointmentView" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="444.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Reports">
+   <children>
+      <TableView fx:id="contactTableView" layoutX="7.0" layoutY="116.0" prefHeight="106.0" prefWidth="649.0">
+        <columns>
+          <TableColumn fx:id="appointmentIdCol" prefWidth="101.0" text="Appointment ID" />
+          <TableColumn fx:id="titleCol" prefWidth="63.0" text="Title" />
+            <TableColumn fx:id="typeCol" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="descriptionCol" prefWidth="138.0" text="Description" />
+            <TableColumn fx:id="startCol" prefWidth="100.0" text="Start" />
+            <TableColumn fx:id="endCol" prefWidth="90.0" text="End" />
+            <TableColumn fx:id="customerIdCol1" prefWidth="81.0" text="Customer ID" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="contactCombo" layoutX="251.0" layoutY="80.0" onAction="#onActionPopulateContactTableView" prefWidth="150.0" />
+      <Label layoutX="202.0" layoutY="84.0" text="Contact:" />
+      <Button layoutX="598.0" layoutY="405.0" mnemonicParsing="false" onAction="#onActionDisplayMainMenu" text="Cancel" />
+      <ComboBox fx:id="monthCombo" layoutX="63.0" layoutY="23.0" onAction="#onActionMonthCount" prefWidth="150.0" />
+      <ComboBox fx:id="typeCombo" layoutX="275.0" layoutY="23.0" onAction="#onActionTypeCount" prefWidth="150.0" />
+      <Label layoutX="17.0" layoutY="27.0" text="Month:" />
+      <Label layoutX="234.0" layoutY="27.0" text="Type:" />
+      <Label fx:id="countLbl" layoutX="447.0" layoutY="27.0" text="Count:" />
+      <TableView fx:id="countryTableView" layoutX="7.0" layoutY="272.0" prefHeight="106.0" prefWidth="649.0">
+         <columns>
+            <TableColumn fx:id="customerIdCol" prefWidth="101.0" text="Customer ID" />
+            <TableColumn fx:id="customerNameCol" prefWidth="181.0" text="Name" />
+            <TableColumn fx:id="countryCol" prefWidth="206.0" text="Country" />
+            <TableColumn fx:id="divisionCol" prefWidth="160.0" text="Division" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="countryCombo" layoutX="262.0" layoutY="235.0" onAction="#onActionPopulateCountryTableView" prefWidth="150.0" />
+      <Label layoutX="212.0" layoutY="239.0" text="Country:" />
+   </children>
+</AnchorPane>
